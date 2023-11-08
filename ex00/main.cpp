@@ -5,7 +5,5 @@ int main( void ) {
   Fixed b( a );
   Fixed c;
   c = b;
-if (c < b)
-  std::cout<<"aa";
 
 return 0; } 
