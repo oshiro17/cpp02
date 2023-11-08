@@ -34,7 +34,7 @@ bool bsp(Point const a, Point const b, Point const c, Point const p)
 	area_abp = getArea(vec_ab,vec_ap);
 	area_bcp = getArea(vec_bp,vec_bc);
 	area_acp = getArea(vec_ac,vec_ap);
-	if (area_abc == area_abp + area_bcp + area_acp)
+	if ( area_abp.toFloat() && area_bcp.toFloat() && area_acp.toFloat() &&(area_abc == area_abp + area_bcp + area_acp))
 		return(true);
 	return(false);
 }
