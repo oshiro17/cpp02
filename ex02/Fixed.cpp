@@ -88,27 +88,27 @@ Fixed	Fixed::operator++(int)
 	return (ret);
 }
 
-bool	Fixed::operator==(const Fixed& obj)
+bool	Fixed::operator==(const Fixed& obj)const
 {
 	return (this->value == obj.value);
 }
 
-bool	Fixed::operator!=(const Fixed& obj)
+bool	Fixed::operator!=(const Fixed& obj)const
 {
 	return (this->value != obj.value);
 }
 
-bool	Fixed::operator>(const Fixed& obj)
+bool	Fixed::operator>(const Fixed& obj)const
 {
 	return (this->value > obj.value);
 }
 
-bool	Fixed::operator<(const Fixed& obj)
+bool	Fixed::operator<(const Fixed& obj)const
 {
 	return (this->value < obj.value);
 }
 
-bool	Fixed::operator<=(const Fixed& obj) const
+bool	Fixed::operator<=(const Fixed& obj)const
 {
 	return (this->value <= obj.value);
 }
@@ -117,7 +117,7 @@ bool	Fixed::operator>=(const Fixed& obj)const
 {
 	return (this->value >= obj.value);
 }
-Fixed Fixed::operator*(const Fixed&ob)
+Fixed Fixed::operator*(const Fixed&ob)const
 {
 	Fixed ret;
 	float t_val = this->toFloat();
@@ -133,7 +133,7 @@ Fixed Fixed::operator*(const Fixed&ob)
 	return (ret);
 }
 
-Fixed Fixed::operator/(const Fixed&ob)
+Fixed Fixed::operator/(const Fixed&ob) const
 {
 	Fixed ret;
 	float t_val = this->toFloat();
@@ -143,13 +143,14 @@ Fixed Fixed::operator/(const Fixed&ob)
 	return (ret);
 }
 
-Fixed Fixed::operator-(const Fixed&ob)
+Fixed Fixed::operator-(const Fixed&ob)const
 {
 	Fixed ret;
 	ret.value =this->value - ob.value;
 	return (ret);
 }
-Fixed Fixed::operator+(const Fixed&ob)
+
+Fixed Fixed::operator+(const Fixed&ob)const
 {
 	Fixed ret;
 	ret.value =this->value + ob.value;

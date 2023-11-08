@@ -17,7 +17,7 @@ public:
 	Fixed(const float num);
 	~Fixed();
 	Fixed	operator++(int);
-	Fixed	operator++();
+	Fixed&	operator++();
 	Fixed	operator--(int);
 	Fixed&	operator--();
 	Fixed	operator+(const Fixed &ob)const;
