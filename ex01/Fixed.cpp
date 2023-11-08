@@ -50,7 +50,16 @@ float	Fixed::toFloat(void) const
 
 int		Fixed::toInt(void) const
 {
-	return (this->value >> this->bits);
+	int ret = 0;
+
+	if (this->value < 0 && this->value > INT_MIN)
+	{
+		ret = this->value * -1;
+		ret = -1 *(ret >> this->bits);
+	}
+	else
+		ret = this->value >> this->bits;
+	return(ret);
 }
 
 int		Fixed::getRawBits(void) const

@@ -5,22 +5,24 @@
 
 Fixed::Fixed()
 {
-	// std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 	this->value = 0;
 }
 
 Fixed::~Fixed()
 {
-	// std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const int n)
 {
+	std::cout << "Int constructor called" << std::endl;
 	this->value = (n << this->bits);
 }
 
 Fixed::Fixed(const float n)
 {
+	std::cout << "Float constructor called" << std::endl;
 	this->value = roundf(n * 256);
 	// std::cout << n <<std::endl;
 
